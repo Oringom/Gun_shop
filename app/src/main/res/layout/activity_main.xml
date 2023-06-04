@@ -115,7 +115,7 @@
 
     <Button
         android:id="@+id/Mines_Button"
-        android:layout_width="50dp"
+        android:layout_width="51dp"
         android:layout_height="50dp"
         android:layout_below="@id/Quantity_Item"
         android:layout_marginStart="120dp"
