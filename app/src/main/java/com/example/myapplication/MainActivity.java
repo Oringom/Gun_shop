@@ -75,23 +75,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        goodsName = spinner.getSelectedItem(). toString();
-        price = (double)goodsMap.get(goodsName);
+        goodsName = spinner.getSelectedItem().toString();
+        price = (double) goodsMap.get(goodsName);
         TextView priceTextView = findViewById(R.id.Price_Text);
-        priceTextView.setText(""+ quantity * price);
-        ImageView  goodsImageView = findViewById(R.id.goodsImageView);
-        if (goodsName.equals("Автоматы")){
-            goodsImageView.setImageResource(R.drawable.автомат);
-
-        } else if (goodsName.equals("Винтовки")){
-            goodsImageView.setImageResource(R.drawable.винтовка);
-    }  else if (goodsName.equals("Карабины")){
-        goodsImageView.setImageResource(R.drawable.карабин);
-    } else if (goodsName.equals("Пулеметы")){
-        goodsImageView.setImageResource(R.drawable.пулемет);
-    } else if (goodsName.equals("Пистолеты-пулеметы")){
-        goodsImageView.setImageResource(R.drawable.пп);
-
+        priceTextView.setText("" + quantity * price);
+        ImageView goodsImageView = findViewById(R.id.goodsImageView);
+        if (goodsName.equals("Автоматы")) {
+            goodsImageView.setImageResource(R.drawable.gun_1);
+        } else if (goodsName.equals("Винтовки")) {
+            goodsImageView.setImageResource(R.drawable.sr);
+        } else if (goodsName.equals("Карабины")) {
+            goodsImageView.setImageResource(R.drawable.kar);
+        } else if (goodsName.equals("Пулеметы")) {
+            goodsImageView.setImageResource(R.drawable.pul);
+        } else if (goodsName.equals("Пистолеты-пулемёты")) {
+            goodsImageView.setImageResource(R.drawable.pp);
+        } else if (goodsName.equals("Пистолеты")) {
+            goodsImageView.setImageResource(R.drawable.pist);
+        }
+    }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
