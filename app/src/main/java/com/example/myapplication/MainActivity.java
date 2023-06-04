@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -78,7 +79,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         price = (double)goodsMap.get(goodsName);
         TextView priceTextView = findViewById(R.id.Price_Text);
         priceTextView.setText(""+ quantity * price);
-    }
+        ImageView  goodsImageView = findViewById(R.id.goodsImageView);
+        if (goodsName.equals("Автоматы")){
+            goodsImageView.setImageResource(R.drawable.автомат);
+
+        } else if (goodsName.equals("Винтовки")){
+            goodsImageView.setImageResource(R.drawable.винтовка);
+    }  else if (goodsName.equals("Карабины")){
+        goodsImageView.setImageResource(R.drawable.карабин);
+    } else if (goodsName.equals("Пулеметы")){
+        goodsImageView.setImageResource(R.drawable.пулемет);
+    } else if (goodsName.equals("Пистолеты-пулеметы")){
+        goodsImageView.setImageResource(R.drawable.пп);
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
