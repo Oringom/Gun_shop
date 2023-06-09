@@ -155,7 +155,9 @@
         android:textColor="@color/white" />
 </RelativeLayout>
 <Button
+
     android:id="@+id/Add_to_Cap"
+    android:onClick="addToCart"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Добавить в корзину"
